@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  docker-self-service-password:
+    image: docker-self-service-password
+    build: .
+    ports:
+      - 80:80
