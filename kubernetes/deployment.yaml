@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: self-service-password
+  labels:
+    app: self-service-password
+  namespace: ldap
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: self-service-password
+  template:
+    metadata:
+      labels:
+        app: self-service-password
+    spec:
+      containers:
+        - name: self-service-password
+          image: omegazeng/docker-self-service-password
+          ports:
+          - containerPort: 80
+          volumeMounts:
+            - name: config-inc-php
+              mountPath: /var/www/html/conf/
+      volumes:
+        - name: config-inc-php
+          configMap:
+            name: config.inc.php

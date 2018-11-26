@@ -1,0 +1,20 @@
+# Pycharm
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Python
+__pycache__/
+
+# Virtual environments
+venv/
+
+# Ansible
+*.retry
+
+# Vim
+.*.sw[pon]
+
+# VS Code
+.vscode/
