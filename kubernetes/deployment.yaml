@@ -21,9 +21,10 @@ spec:
           ports:
           - containerPort: 80
           volumeMounts:
-            - name: config-inc-php
+            - name: config-volume
               mountPath: /var/www/html/conf/
+              readOnly: true
       volumes:
-        - name: config-inc-php
+        - name: config-volume
           configMap:
-            name: config.inc.php
+            name: self-service-password

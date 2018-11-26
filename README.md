@@ -10,7 +10,7 @@ Docker image https://ltb-project.org/documentation/self-service-password
 ## ssp config
 [config.inc.php](https://github.com/ltb-project/self-service-password/blob/master/conf/config.inc.php)
 
-    kubectl create configmap config.inc.php --from-file=config.inc.php -n ldap
+    kubectl create configmap self-service-password --from-file=config.inc.php -n ldap
 
 ## deploy
     kubectl create -f kubernetes/deployment.yaml
