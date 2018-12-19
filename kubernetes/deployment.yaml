@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: self-service-password
-          image: omegazeng/docker-self-service-password
+          image: omegazeng/self-service-password
           ports:
           - containerPort: 80
           volumeMounts:
